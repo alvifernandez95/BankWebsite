@@ -1,0 +1,17 @@
+/*Reseteamos el padding y el margen para todos los archivos. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.imageContainer {
+  margin-bottom: 3%;
+}
+
+.change-color {
+  fill: white;
+}
+
+form {
+  margin-bottom: 3%;
+}/*# sourceMappingURL=main.css.map */
