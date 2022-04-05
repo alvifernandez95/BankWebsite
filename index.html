@@ -30,11 +30,41 @@
         </header>
       
         <main class="px-3 text-dark">
-          <h1>Bienvenido a tu Banco</h1>
-          <p class="lead">Este es el portal de TuBanco. Aquí vas a poder realizar transferencias a tus contactos, agregar nuevos y realizar inversiones. </p>
-          <p class="lead">
-            <a href="./paginas/inversiones.html" class="btn btn-lg btn-secondary fw-bold">Invertí ahora</a>
-          </p>
+          <div id="carouselInicio" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselInicio" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselInicio" data-bs-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="background-image:url(./imagenes/invest-image.jpg);">
+                <div class="carousel-item--container">
+                  <h1>Bienvenido a tu Banco</h1>
+                  <p class="lead">Este es el portal de TuBanco. Aquí vas a poder realizar transferencias a tus contactos, agregar nuevos y realizar inversiones. </p>
+                  <p class="lead">
+                    <a href="./paginas/inversiones.html" class="btn btn-lg btn-primary fw-bold">Invertí ahora</a>
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item" style="background-image:url(./imagenes/bank-app.jpg);">
+                <div class="carousel-item--container">
+                  <h1>Bienvenido a tu Banco</h1>
+                  <p class="lead">Este es el portal de TuBanco. Aquí vas a poder realizar transferencias a tus contactos, agregar nuevos y realizar inversiones. </p>
+                  <p class="lead">
+                    <a href="./paginas/inversiones.html" class="btn btn-lg btn-primary fw-bold">Invertí ahora</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a href="#carouselInicio" class="carousel-control-prev" role="button" data-bs-slide="prev">
+              <span class="sr-only">Anterior</span>
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a href="#carouselInicio" class="carousel-control-next" role="button" data-bs-slide="next">
+              <span class="sr-only">Siguiente</span>
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+          </div>
+
         </main>
       
         <footer class="footer mt-auto py-3 bg-dark">
