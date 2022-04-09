@@ -7,7 +7,7 @@ const simularInversion = (ev)=> {
     let montoFinal = montoInicial*(Math.pow((1 + (r/n)),(n*t)));
     //console.log(montoFinal)
     let mensaje1 = 'El monto acumulado tras 1 año es de $' + montoFinal +'.'
-    document.getElementById("resultadoSimulacion1").innerHTML += mensaje1;
+    document.getElementById("resultadoSimulacion1").innerHTML = mensaje1;
 
 }
 
@@ -20,7 +20,7 @@ const simularInversion2 = (ev)=> {
     let montoFinal2 = montoInicial2*(Math.pow((1 + (r2/n2)),(n2*t2)));
     console.log(montoFinal2)
     let mensaje2 = 'El monto acumulado tras 1 año es de $' + montoFinal2 +'.'
-    document.getElementById("resultadoSimulacion2").innerHTML += mensaje2;
+    document.getElementById("resultadoSimulacion2").innerHTML = mensaje2;
 }
 
 
