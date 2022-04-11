@@ -38,12 +38,35 @@
               <input type="text" class="form-control" id="nombreContacto" aria-describedby="contacto nombre" placeholder="Nombre de tu contacto">
             </div>
             <div class="mb-3">
+              <label for="aliasContacto" class="form-label">Alias del nuevo contacto:</label>
+              <input type="text" class="form-control" id="aliasContacto" aria-describedby="contacto alias" placeholder="Alias de tu contacto">
+            </div>
+            <div class="mb-3">
               <label for="CBUContacto" class="form-label">CBU de tu nuevo contacto:</label>
               <input type="text" class="form-control" id="CBUContacto" aria-describedby="contacto CBU" placeholder="CBU de tu contacto">
               <div id="CBUHelp" class="form-text">Tranquilo, tu información es privada y no será compartida con nadie.</div>
             </div>
             <button type="submit" class="btn btn-primary" id="addContactButton">Añadir a mi agenda</button>
           </form>
+          <h3>Tus contactos</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">CBU</th>
+                <th scope="col">Alias</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+            </tbody>
+          </table>
           
         </main>
       
