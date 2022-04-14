@@ -1,23 +1,22 @@
-
 const appendAgenda = (ev)=> {
-    ev.preventDefault();
-    const agendaCliente = [
-        {nombre: "Empleador", CBU:"0000112261057897"},
-        {nombre: "EDESUR", CBU:"0000023229397400"},
-        {nombre: "Consorcio", CBU:"0000112271764259"},
-        {nombre: "Metrogas", CBU:"0000023229397400"},
-        {nombre: "Carrefour", CBU:"0000114428102982"},
-        {nombre: "Mercado Pago", CBU:"0000552265180004"}
-    ] 
+    ev.preventDefault(); 
     let contacto = {
         nombre: document.getElementById('nombreContacto').value, 
+        alias: document.getElementById('aliasContacto').value,
         CBU: document.getElementById('CBUContacto').value
     }
-    agendaCliente.push(contacto)
     document.forms[0].reset();
-    console.warn('Se agregó', contacto, 'a su agenda.');
-    console.log(agendaCliente)
-
+    let indexA = localStorage.length;
+    let indexB = localStorage.length + 1;
+    let indexC = localStorage.length + 2;
+    localStorage.setItem(indexA.toString(),contacto.nombre.toString());
+    localStorage.setItem(indexB.toString(),contacto.alias.toString());
+    localStorage.setItem(indexC.toString(),contacto.CBU.toString());
+    let tablaClientes = document.getElementById('tablaClientes');
+    let row = document.createElement('tr');
+    let html = '<td>' + contacto.nombre +'</td><td>' + contacto.alias + '</td><td>' + contacto.CBU+'</td>';
+    row.innerHTML = html;
+    tablaClientes.appendChild(row);
 }
 
 
