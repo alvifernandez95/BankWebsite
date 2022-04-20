@@ -1,78 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <!--Hoja de Estilos de CSS-->
-    <link href="../main.css" rel="stylesheet">
+    <link href="../main.css" rel="stylesheet" />
     <!--Font Awesome-->
-    <script src="https://kit.fontawesome.com/d379baef5d.js" crossorigin="anonymous"></script>
-    <!--Google Fonts-->
-
+    <script
+      src="https://kit.fontawesome.com/d379baef5d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Sweet Alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--Título de la página-->
     <title>Bienvenido a tu Banco</title>
-</head>
-<body class="d-flex h-100 text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-white">
-        <header class="mb-auto bg-dark p-5 text">
-          <div>
-            <h3 class="float-md-start mb-0">Tu Banco</h3>
-            <nav class="nav nav-masthead justify-content-center float-md-end">
-              <a class="nav-link" href="../index.html">Inicio</a>
-              <a class="nav-link" href="./balance.html">Balance</a>
-              <a class="nav-link active" aria-current="page" href="./agenda.html">Agenda</a>
-              <a class="nav-link" href="./inversiones.html">Inversiones</a>
-            </nav>
+  </head>
+  <body class="d-flex h-100 text-center">
+    <div
+      class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-white"
+    >
+      <header class="mb-auto bg-dark p-5 text">
+        <div>
+          <h3 class="float-md-start mb-0">Tu Banco</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link" href="../index.html">Inicio</a>
+            <a class="nav-link" href="./balance.html">Balance</a>
+            <a class="nav-link active" aria-current="page" href="./agenda.html"
+              >Agenda</a
+            >
+            <a class="nav-link" href="./inversiones.html">Inversiones</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="px-3 text-dark">
+        <h1>Tu agenda</h1>
+        <h3>Añadir un contacto a tu agenda</h3>
+        <form>
+          <div class="mb-3">
+            <label for="nombreContacto" class="form-label"
+              >Nombre del nuevo contacto:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="nombreContacto"
+              aria-describedby="contacto nombre"
+              placeholder="Nombre de tu contacto"
+            />
           </div>
-        </header>
-      
-        <main class="px-3 text-dark">
-          <h1>Tu agenda</h1>
-          <h3>Añadir un contacto a tu agenda</h3>
-          <form>
-            <div class="mb-3">
-              <label for="nombreContacto" class="form-label">Nombre del nuevo contacto:</label>
-              <input type="text" class="form-control" id="nombreContacto" aria-describedby="contacto nombre" placeholder="Nombre de tu contacto">
+          <div class="mb-3">
+            <label for="aliasContacto" class="form-label"
+              >Alias del nuevo contacto:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="aliasContacto"
+              aria-describedby="contacto alias"
+              placeholder="Alias de tu contacto"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="CBUContacto" class="form-label"
+              >CBU de tu nuevo contacto:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="CBUContacto"
+              aria-describedby="contacto CBU"
+              placeholder="CBU de tu contacto"
+            />
+            <div id="CBUHelp" class="form-text">
+              Tranquilo, tu información es privada y no será compartida con
+              nadie.
             </div>
-            <div class="mb-3">
-              <label for="aliasContacto" class="form-label">Alias del nuevo contacto:</label>
-              <input type="text" class="form-control" id="aliasContacto" aria-describedby="contacto alias" placeholder="Alias de tu contacto">
-            </div>
-            <div class="mb-3">
-              <label for="CBUContacto" class="form-label">CBU de tu nuevo contacto:</label>
-              <input type="text" class="form-control" id="CBUContacto" aria-describedby="contacto CBU" placeholder="CBU de tu contacto">
-              <div id="CBUHelp" class="form-text">Tranquilo, tu información es privada y no será compartida con nadie.</div>
-            </div>
-            <button type="submit" class="btn btn-primary" id="addContactButton">Añadir a mi agenda</button>
-          </form>
-          <h3>Tus contactos</h3>
-          <table class="table table-primary" id="tablaClientes">
-            <thead>
-              <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Alias</th>
-                <th scope="col">CBU</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
-          
-        </main>
-      
-        <footer class="footer mt-auto py-3 bg-dark">
-            <div class="container">
-              <span class="text-muted">Alvaro Fernandez, 2022</span>
-            </div>
-        </footer>
+          </div>
+          <button type="button" class="btn btn-primary" id="addContactButton">
+            Añadir a mi agenda
+          </button>
+        </form>
+        <h3>Tus contactos</h3>
+        <table class="table table-primary" id="tablaClientes">
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Alias</th>
+              <th scope="col">CBU</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </main>
+
+      <footer class="footer mt-auto py-3 bg-dark">
+        <div class="container">
+          <span class="text-muted">Alvaro Fernandez, 2022</span>
+        </div>
+      </footer>
     </div>
     <!--Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
     <!--Javascript-->
     <script src="../javascript/ejercicio.js"></script>
-</body>
+  </body>
 </html>
