@@ -27,8 +27,20 @@ function agregar_nuevo_contacto(itemA, itemB, itemC) {
     localStorage.setItem(indexA.toString(), itemA.toString());
     localStorage.setItem(indexB.toString(), itemB.toString());
     localStorage.setItem(indexC.toString(), itemC.toString());
+    Swal.fire({
+      title:"¡Genial!",
+      text:"¡Agregaste un nuevo contacto a tu agenda!",
+      icon:"success",
+      confirmButtonText:"Ok"
+    })
+
   } else {
-    alert("El registro ingresado podría estar vacío.");
+    Swal.fire({
+      title:"Error",
+      text:"El registro ingresado podría estar vacío.",
+      icon:"error",
+      confirmButtonText:"Ok"
+    })
   }
 }
 
@@ -48,10 +60,4 @@ btnAgregar.addEventListener("click", () => {
   nombre.value = "";
   alias.value = "";
   CBU.value = "";
-  Swal.fire({
-    title:"¡Genial!",
-    text:"¡Agregaste un nuevo contacto a tu agenda!",
-    icon:"success",
-    confirmButtonText:"Ok"
-  })
 });
